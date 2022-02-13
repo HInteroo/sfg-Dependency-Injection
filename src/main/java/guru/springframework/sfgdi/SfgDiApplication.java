@@ -18,17 +18,15 @@ public class SfgDiApplication {
 		System.out.println("----------- Primary Bean");
 		System.out.println(myController.sayHello());
 
-		System.out.println("\n added @Controller & @Autowired\n");
-		System.out.println("----------- property");
+		System.out.println("----------- property"); //added @Controller & @Autowired
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
 		System.out.println(propertyInjectedController.getGreeting());
 
-		System.out.println("----------- Setter");
+		System.out.println("----------- Setter"); //added @Controller & @Autowired
 		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
 		System.out.println(setterInjectedController.getGreeting());
 
-		System.out.println("\n added @Controller only\n");
-		System.out.println("----------- Constructor");
+		System.out.println("----------- Constructor"); //added @Controller only
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
 	}
