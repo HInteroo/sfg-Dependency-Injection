@@ -1,7 +1,9 @@
 package guru.springframework.sfgdi.Controllers;
 
 import guru.springframework.sfgdi.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
 
     private final GreetingService greetingService; //best practice use private final and then provide a constructor
