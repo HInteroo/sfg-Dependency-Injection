@@ -1,9 +1,6 @@
 package guru.springframework.sfgdi;
 
-import guru.springframework.sfgdi.Controllers.ConstructorInjectedController;
-import guru.springframework.sfgdi.Controllers.MyController;
-import guru.springframework.sfgdi.Controllers.PropertyInjectedController;
-import guru.springframework.sfgdi.Controllers.SetterInjectedController;
+import guru.springframework.sfgdi.Controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +10,8 @@ public class SfgDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args); //Spring effectively is saying create a new instance of this class, put it into the context
-
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 		MyController myController = (MyController) ctx.getBean("myController"); //By default, .getBean(String s)
 		 																		//will always return the class Name
 																				//but first letter lower case
