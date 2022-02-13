@@ -1,10 +1,8 @@
 package guru.springframework.sfgdi.Controllers;
 
-import guru.springframework.sfgdi.services.GreetingServiceImpl;
+import guru.springframework.sfgdi.services.ConstructorInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {//Manual property injection, Not the best way to do it. Least preferred way.
 
@@ -13,7 +11,7 @@ class PropertyInjectedControllerTest {//Manual property injection, Not the best 
     @BeforeEach
     void setUp() { //Setting up the test condition
         controller = new PropertyInjectedController();              //So I am mimicking what the Spring Framework would be doing. I'm actually creating the object
-        controller.greetingService = new GreetingServiceImpl();     //here, I want to say get the greeting
+        controller.greetingService = new ConstructorInjectedGreetingService();     //here, I want to say get the greeting
     }
 
     @Test

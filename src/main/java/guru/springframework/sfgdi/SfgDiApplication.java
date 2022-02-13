@@ -20,7 +20,7 @@ public class SfgDiApplication {
 		String greetings = myController.sayHello();
 		System.out.println(greetings);
 
-		System.out.println("\n added @Controller & @Autowired");
+		System.out.println("\n added @Controller & @Autowired\n");
 		System.out.println("----------- property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
 		System.out.println(propertyInjectedController.getGreeting());
@@ -29,7 +29,7 @@ public class SfgDiApplication {
 		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
 		System.out.println(setterInjectedController.getGreeting());
 
-		System.out.println("\n added @Controller only");
+		System.out.println("\n added @Controller only\n");
 		System.out.println("----------- Constructor");
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
