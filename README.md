@@ -1,4 +1,4 @@
-# Dependency Injection Examples
+# SpringFramework Guru - Dependency Injection 
 
 Supposed to be forked from https://github.com/springframeworkguru/sfg-di (My mistake)
 
